@@ -2,6 +2,6 @@
 
 int main(void)
 {
-    printf("Hello from C!\n");
+    printf("Hello from travistest!\n");
     return 0;
 }

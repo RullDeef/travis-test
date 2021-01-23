@@ -1,5 +1,15 @@
-run : app.exe
-	./app.exe
+#!/usr/bin/make -f
 
-app.exe : main.c
+all : travistest
+
+travistest : main.c
 	$(CC) -std=c99 -o $@ $^
+
+clean :
+	rm travistest
+
+install : travistest
+	install travistest $(DESTDIR)$(prefix)/bin/travistest
+
+uninstall :
+	rm $(DESTDIR)$(prefix)/bin/travistest
