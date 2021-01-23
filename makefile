@@ -1,4 +1,5 @@
 #!/usr/bin/make -f
+prefix := /usr/local
 
 all : travistest
 

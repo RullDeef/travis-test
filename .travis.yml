@@ -2,4 +2,8 @@ language: c
 compiler: gcc
 os: linux
 
-script: make run
+script: |
+    ./configure
+    make
+    make install
+    travistest
